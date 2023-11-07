@@ -1,14 +1,30 @@
-@media screen and (width: 750px) {
-* {
-  font-size: 50%;
-}
+@media screen and (mind-width: 500) and (max-width: 750px) {
+
 
   h1 {
-    font-size: 4rem;
+    font-size: 14px;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 8px;
+  }
+}
+
+@media screen and (mind-width:100px) and (max-width: 400px) {
+  h1 {
+    font-size: 10px;
+  }
+
+  h2 {
+    font-size: 8px;
+  }
+
+  p {
+    font-size: 6px;
   }
 }
 
@@ -81,6 +97,7 @@ section {
   width: 100%;
   height: 100vh;
   background: var(--color2);
+  line-height: 1;
 }
 
 #welcome-section h1, #projects h1, #contact h1 {
@@ -89,6 +106,7 @@ section {
   text-align: center;
   font-size: 8rem;
   color: var(--color4);
+  padding-top: 6rem;
 }
 
 #welcome-section h1 {
@@ -104,9 +122,10 @@ section {
   color: var(--color4);
 }
 
-#welcome-section h2 span {
+#welcome-section h2 span, #welcome-section h2 span a {
   font-size: 4rem;
   color: var(--color1);
+  text-decoration: underline;
 }
 
 #projects {
@@ -114,6 +133,7 @@ section {
   height: 200vh;
   background: linear-gradient(var(--color2) 5%, var(--color1) 95%);
   text-align: center;
+  line-height: 1;
 }
 
 #projects h1 {
@@ -182,7 +202,8 @@ section {
   background: linear-gradient(var(--color1) 0%, var(--color2) 100%);
   text-align: center;
   font-size: 4rem;
-  padding-top: 20px;
+  padding-top: 5%;
+  line-height: 1;
 }
 
 .icon-container {
@@ -210,9 +231,11 @@ section {
   text-align: center;
   margin-top: 20px;
   padding-bottom: 10px;
+  color: var(--color4);
 }
 
 .fcc-link {
   text-decoration: none;
   font-size: 2rem;
+  color: var(--color3);
 }
