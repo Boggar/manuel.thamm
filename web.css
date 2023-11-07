@@ -1,14 +1,23 @@
-@media (min-width: 1000) {
-  * {
-    font-size: 20%;
+@media screen and (width: 750px) {
+* {
+  font-size: 50%;
+}
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }
 
 :root {
-  --color4: #6C5FA7;
-  --color3: #6B3779;
-  --color1: #B24986;
-  --color2: #FA8573;
+  --color4: #F5F5F5;
+  --color3: #31E3CB;
+  --color1: #2F88FC;
+  --color2: #41514E;
+  --complentary: #red;
 }
 
 * {
@@ -20,12 +29,13 @@
 }
 
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 25%;
-    width: 100%;
-    height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 25%;
+  width: 100%;
+  height: 50px;
+  z-index: 10;
 }
 
 .nav-list {
@@ -53,10 +63,24 @@ li a:hover {
   background-color: var(--color2);
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 #welcome-section {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(var(--color1) 5%, var(--color2) 95%);
+  background: var(--color2);
 }
 
 #welcome-section h1, #projects h1, #contact h1 {
@@ -77,12 +101,12 @@ li a:hover {
   font-size: 4rem;
   font-style: italic;
   font-weight: light;
-  color: var(--color3);
+  color: var(--color4);
 }
 
 #welcome-section h2 span {
   font-size: 4rem;
-  color: yellow;
+  color: var(--color1);
 }
 
 #projects {
@@ -107,9 +131,17 @@ li a:hover {
   margin: auto;
   width: 400px;
   height: 550px;
-  background-color: lightgray;
+  background-color: var(--color2);
+  color: #F5F5F5;
   border-radius: 10px;
   text-decoration: none;
+}
+
+.project-link:hover {
+  background-color: var(--color4);
+  color: var(--color2);
+  scale: 110%;
+  z-index: -1;
 }
 
 .project-link img {
@@ -128,14 +160,20 @@ li a:hover {
   display: block;
   font-size: 2rem;
   text-decoration: none;
-  color: white;
+  color: #F5F5F5;
   width: 150px;
   height: 50px;
   margin: auto;
   margin-top: 75px;
-  background-color: var(--color4);
+  background-color: var(--color2);
   padding: 1.5rem;
   border-radius: 10px;
+}
+
+#all-projects-link:hover {
+  background-color: var(--color4);
+  color: var(--color2);
+  scale: 125%;
 }
 
 #contact {
@@ -144,8 +182,7 @@ li a:hover {
   background: linear-gradient(var(--color1) 0%, var(--color2) 100%);
   text-align: center;
   font-size: 4rem;
-  margin: auto;
-  padding-top: 5px;
+  padding-top: 20px;
 }
 
 .icon-container {
@@ -162,6 +199,10 @@ li a:hover {
   font-weight: bold;
   text-decoration: none;
   color: var(--color3);
+}
+
+.profile-link:hover {
+  scale: 125%;
 }
 
 .footnote {
