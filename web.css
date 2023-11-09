@@ -1,39 +1,83 @@
-@media screen and (mind-width: 500) and (max-width: 750px) {
-
-
-  h1 {
-    font-size: 14px;
+@media screen and (max-width: 450px) {
+  * {
+    overflow-x: hidden;
+    grid-column: unset;
   }
 
-  h2 {
-    font-size: 10px;
+  .page-wrapper {
+    overflow-x: hidden;
+    width: 200px;
+    max-width: 100%;
   }
 
-  p {
-    font-size: 8px;
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(minmax(200px, 2fr));
+    justify-content: center;
+    gap: 5px;
+    align-items: left;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    scale: 75%;
+  }
+
+  .project-link {
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 60px;
+    background-color: var(--color2);
+    color: #f5f5f5;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .project-link:hover {
+    background-color: var(--color4);
+    color: var(--color2);
+    z-index: -1;
+  }
+
+  .project-link img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
   }
 }
 
-@media screen and (mind-width:100px) and (max-width: 400px) {
-  h1 {
-    font-size: 10px;
+@media screen and (max-width: 1000px) {
+  * {
+    overflow-x: hidden;
+    grid-column: unset;
   }
 
-  h2 {
-    font-size: 8px;
+  .page-wrapper {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100%;
   }
 
-  p {
-    font-size: 6px;
+  #welcome-section {
+    height: 100%;
   }
 }
 
 :root {
-  --color4: #F5F5F5;
-  --color3: #31E3CB;
-  --color1: #2F88FC;
-  --color2: #41514E;
-  --complentary: #red;
+  /*
+  --color3: #ffd461;
+  --color1: #ef7b3e;
+  --color2: #ea5455;
+  --color4: #2c4059;
+  --contrast: lime;
+  */
+
+  --color1: #6c5fa7;
+  --color2: #6b3779;
+  --color3: #b24968;
+  --color4: #fa8573;
+  --contrast: #faee1c;
 }
 
 * {
@@ -99,9 +143,12 @@ section {
   height: 100%;
   background: var(--color2);
   line-height: 1;
+  padding-bottom: 25%;
 }
 
-#welcome-section h1, #projects h1, #contact h1 {
+#welcome-section h1,
+#projects h1,
+#contact h1 {
   display: block;
   padding: 5rem;
   text-align: center;
@@ -114,7 +161,8 @@ section {
   padding-top: 50vh;
 }
 
-#welcome-section h2, #contact h2 {
+#welcome-section h2,
+#contact h2 {
   padding: 2rem;
   text-align: center;
   font-size: 4rem;
@@ -123,9 +171,10 @@ section {
   color: var(--color4);
 }
 
-#welcome-section h2 span, #welcome-section h2 span a {
+#welcome-section h2 span,
+#welcome-section h2 span a {
   font-size: 4rem;
-  color: var(--color1);
+  color: var(--contrast);
   text-decoration: underline;
 }
 
@@ -143,17 +192,21 @@ section {
 
 .project-container {
   display: grid;
-  grid-template-columns: 2fr 2fr;
-  gap: 30px;
+  grid-template-columns: repeat(minmax(200px, 2fr));
+  justify-content: center;
+  gap: 20px;
+  align-items: left;
+  text-align: center;
+  margin: auto;
 }
 
 .project-link {
   display: block;
-  margin: auto;
+  margin: 20px;
   width: 400px;
   height: 550px;
   background-color: var(--color2);
-  color: #F5F5F5;
+  color: #f5f5f5;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -161,7 +214,6 @@ section {
 .project-link:hover {
   background-color: var(--color4);
   color: var(--color2);
-  scale: 110%;
   z-index: -1;
 }
 
@@ -181,7 +233,7 @@ section {
   display: block;
   font-size: 2rem;
   text-decoration: none;
-  color: #F5F5F5;
+  color: #f5f5f5;
   width: 150px;
   height: 50px;
   margin: auto;
@@ -214,13 +266,13 @@ section {
   margin-bottom: 20px;
 }
 
-.profile-link{
+.profile-link {
   display: flex;
   gap: 10px;
   font-size: 6rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--color3);
+  color: var(--contrast);
 }
 
 .profile-link:hover {
@@ -238,5 +290,5 @@ section {
 .fcc-link {
   text-decoration: none;
   font-size: 2rem;
-  color: var(--color3);
+  color: var(--contrast);
 }
