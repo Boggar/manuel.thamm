@@ -7,6 +7,10 @@
   .project-container {
     scale: 75%;
   }
+
+  .profile-link {
+    scale: 30%;
+  }
 }
 
 @media screen and (max-width: 1000px) {}
@@ -140,13 +144,22 @@ li a:hover {
   background-color: var(--color2);
   padding: 1.5rem;
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 #all-projects-link:hover {
   background-color: var(--color4);
   color: var(--color2);
   scale: 125%;
+}
+
+#contact {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--color1) 0%, var(--color2) 100%);
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 5%;
+  line-height: 1;
 }
 
 .footnote {
@@ -161,4 +174,24 @@ li a:hover {
   text-decoration: none;
   font-size: 2rem;
   color: var(--contrast);
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.profile-link {
+  display: flex;
+  gap: 10px;
+  font-size: 6rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--contrast);
+}
+
+.profile-link:hover {
+  scale: 125%;
 }
