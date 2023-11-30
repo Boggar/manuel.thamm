@@ -48,16 +48,13 @@
     flex-direction: column;
 }
 
-ul {
-    list-style: none;
-}
-
 li a {
     display: block;
     font-size: 2.2rem;
     text-decoration: none;
     padding: 1.8rem 2rem;
     color: white;
+    width: 95%;
 }
 
 li a:hover {
@@ -80,13 +77,5 @@ li a:active {
     font-size: 8rem;
     color: var(--color4);
     text-align: center;
-}
-
-.list {
-    list-style: circle;
-    color: black;
-}
-
-.list li {
-    color: var(--contrast);
+    text-decoration: underline;
 }

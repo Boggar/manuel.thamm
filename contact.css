@@ -82,12 +82,14 @@ li a:active {
     font-size: 8rem;
     color: var(--color4);
     text-align: center;
+    text-decoration: underline;
 }
 
 #list {
-    font-size: 5rem;
+    font-size: 3rem;
+    line-height: 105%;
     text-align: left;
-    color: var(--contrast);
+    color: white;
 }
 
 #list li {
@@ -96,9 +98,9 @@ li a:active {
 
 #list li span {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: underline;
-    color: var(--color4);
+    color: var(--contrast);
 }
 
 #contact {
